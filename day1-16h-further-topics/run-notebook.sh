@@ -20,6 +20,7 @@ $docker_cmd pull maedoc/recon
 # boot it
 $docker_cmd run --rm -it \
     -v $(pwd):/opt/work \
+    -v /Users/maedoc/Data/ol/02-02-15_13h38:/opt/meg-data \
     -v /Users/maedoc/Data/ol/fs/ol:/opt/freesurfer/subjects/ol \
     -p 127.0.0.1:8888:8888 -p 127.0.0.1:8000:8000 \
     maedoc/recon jupyter notebook --allow-root --ip=0.0.0.0
