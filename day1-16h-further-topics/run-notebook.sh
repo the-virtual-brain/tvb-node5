@@ -14,8 +14,6 @@ fi
 
 echo "invoking Docker with '$docker_cmd'" 
 
-exit 0
-
 # make sure our image is up to date
 $docker_cmd pull maedoc/recon
 
