@@ -16,8 +16,10 @@ echo "invoking Docker with '$docker_cmd'"
 
 exit 0
 
+# make sure our image is up to date
 $docker_cmd pull maedoc/recon
 
+# boot it
 $docker_cmd run --rm -it \
     -v $(pwd):/opt/work \
     -v /Users/maedoc/Data/ol/fs/ol:/opt/freesurfer/subjects/ol \
